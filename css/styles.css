@@ -100,7 +100,9 @@ img {
 
 .contact .contact-item + .contact-item {
   margin-left: 50px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .contact .link {
   display: block;
   padding-top: 32px;
@@ -112,7 +114,6 @@ img {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact .link:hover,
@@ -132,6 +133,7 @@ img {
   max-width: 1600px;
   margin-right: auto;
   margin-left: auto;
+  text-align: center;
   background-color: #c4c4c4;
   background-repeat: no-repeat;
   background-position: center;
@@ -150,8 +152,29 @@ img {
   line-height: calc(60 / 44);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  align-items: center;
-  text-align: center;
+}
+
+.btn-primary {
+  padding: 10px 32px;
+  border: none;
+  margin: 0 auto;
+
+  background-color: var(--accent-color);
+  color: var(--text-white);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #188ce8;
 }
 
 .peculiarities {
@@ -319,37 +342,24 @@ img {
   letter-spacing: 0.03em;
 }
 
-.btn-primary {
-  padding: 10px 32px;
-  min-width: 216px;
-  border: none;
-  margin: 0 auto;
-
-  background-color: var(--accent-color);
-  color: var(--text-white);
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: calc (30 / 16);
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.footer {
+  padding-bottom: 60px;
+  padding-top: 60px;
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
-  background-color: #188ce8;
+.footer-address {
+  display: inline-block;
+  margin-right: 70px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer .text {
   margin-top: 0;
-  margin-bottom: 0;
-
+  margin-bottom: 9px;
   color: var(--text-white);
   font-style: normal;
   font-size: 14px;
@@ -358,6 +368,7 @@ img {
 }
 
 .footer .link {
+  display: inline-block;
   font-style: normal;
   font-size: 14px;
   line-height: calc(24 / 14);
@@ -365,6 +376,10 @@ img {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer .link:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer .link:hover,
@@ -515,15 +530,6 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 }
-.footer {
-  padding-bottom: 60px;
-  padding-top: 60px;
-}
-
-.footer-address {
-  display: inline-block;
-  margin-right: 70px;
-}
 
 .our-clients {
   margin-top: 0;
@@ -551,7 +557,6 @@ img {
   fill: currentColor;
   margin-right: 10px;
   align-items: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-smartphone {
@@ -560,7 +565,6 @@ img {
   fill: currentColor;
   margin-right: 10px;
   align-items: center;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link .icon-envelope:hover,
